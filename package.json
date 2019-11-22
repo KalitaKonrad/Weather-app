@@ -16,9 +16,14 @@
     "url": "https://github.com/KalitaKonrad/Weather-app-JS/issues"
   },
   "homepage": "https://github.com/KalitaKonrad/Weather-app-JS#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "bootstrap": "^4.3.1",
     "browser-sync": "^2.26.7",
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.7",
+    "webpack": "^4.41.2"
   }
 }
