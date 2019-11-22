@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/KalitaKonrad/Weather-app-JS#readme",
   "dependencies": {
-    "bootstrap": "^4.3.1"
+    "bootstrap": "^4.3.1",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2"
   }
 }
