@@ -32,10 +32,6 @@ $main-box-min-width: 350px;
   border: 3px solid black;
 }
 
-.logo-box, .city-box, .location-box {
-  border: 1px solid blue;
-}
-
 .logo-box {
   display: flex;
   justify-content: center;
@@ -138,10 +134,7 @@ $main-box-min-width: 350px;
 .main-city-box {
   display: flex;
   flex-flow: column wrap;
-  border: 1px solid yellow;
   min-width: $main-box-min-width;
-
-  
 }
 
 .weather-png { // img
@@ -165,6 +158,79 @@ $main-box-min-width: 350px;
   line-height: 22px;
 }
 
+.temp-box {
+  display: flex;
+  flex-flow: column wrap;
+  min-width: $main-box-min-width;
+  justify-content: space-around;
+}
+
+.temp-sub-box1 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.current-temp, .min-max-temp {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  margin: 0 10px;
+}
+
+.current-temp {
+  font-size: 58px;
+  line-height: 67px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 40px 0;
+}
+
+.temp {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 20px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.temp-sub-box2 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.pressure, .humidity, .wind {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 300;
+  color: $font-color;
+  font-size: 17px;
+}
+
+.humidity {
+  border-left: 1px solid rgba(212, 237, 255, 0.2);
+  border-right: 1px solid rgba(212, 237, 255, 0.2);
+  padding: 0 20px;
+  margin: 0 10px;
+}
+
+.pressure {
+  border-left: 1px solid rgba(212, 237, 255, 0.2);
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.wind {
+  border-right: 1px solid rgba(212, 237, 255, 0.2);
+  padding-right: 20px;
+  padding-left: 10px;
+}
 /* WHOLE-WEEK-WEATHER CONTAINER AND CONTENT */
 
 .whole-week-weather-container {
