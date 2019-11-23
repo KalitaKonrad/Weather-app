@@ -1,8 +1,9 @@
-$bg-color: lightblue;
+$bg-color: rgb(0, 153, 255);
 $font-color: #fff;
 $location-container-flex-basis: 25%;
 $main-container-flex-basis: 45%;
 $whole-week-weather-container-flex-basis: 30%;
+$main-box-min-width: 350px;
 
 :root {
   //background: linear-gradient(180deg, #002947 0%, rgba(56, 144, 207, 0.79) 100%);
@@ -11,7 +12,7 @@ $whole-week-weather-container-flex-basis: 30%;
   font-family: 'Raleway', sans-serif;
 }
 
-/* MAIN CONTAINERS */
+/* CONTAINER */
 
 .container {
   display: flex;
@@ -21,32 +22,15 @@ $whole-week-weather-container-flex-basis: 30%;
   border: 3px solid black;
 }
 
+/* LOCATION-CONTAINER AND CONTENT */
+
 .location-container {
   display: flex;
   flex-flow: column wrap;
   flex-basis: $location-container-flex-basis;
   justify-content: center;
   border: 3px solid black;
-
 }
-
-.main-container {
-  display: flex;
-  flex-flow: column wrap;
-  flex-basis: $main-container-flex-basis;
-  border: 3px solid black;
-
-}
-
-.whole-week-weather-container {
-  display: flex;
-  flex-flow: column wrap;
-  flex-basis: $whole-week-weather-container-flex-basis;
-  border: 3px solid black;
-
-}
-
-/* LOCATION-CONTAINER CONTENT */
 
 .logo-box, .city-box, .location-box {
   border: 1px solid blue;
@@ -141,5 +125,52 @@ $whole-week-weather-container-flex-basis: 30%;
   }
 }
 
-/* MAIN-CONTAINER CONTENT */
+/* MAIN-CONTAINER AND CONTENT */
 
+.main-container {
+  display: flex;
+  flex-flow: column wrap;
+  flex-basis: $main-container-flex-basis;
+  border: 3px solid black;
+  justify-content: center;
+}
+
+.main-city-box {
+  display: flex;
+  flex-flow: column wrap;
+  border: 1px solid yellow;
+  min-width: $main-box-min-width;
+
+  
+}
+
+.weather-png { // img
+  position: relative;
+  align-self: center;
+  left: 100px;
+}
+.city-name {
+  min-width: $main-box-min-width;
+  text-align: center;
+  font-size: 72px;
+  line-height: 83px;
+  margin: 10px 0;
+}
+
+.weather-description {
+  min-width: $main-box-min-width;
+  text-align: center;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 22px;
+}
+
+/* WHOLE-WEEK-WEATHER CONTAINER AND CONTENT */
+
+.whole-week-weather-container {
+  display: flex;
+  flex-flow: column wrap;
+  flex-basis: $whole-week-weather-container-flex-basis;
+  border: 3px solid black;
+
+}
