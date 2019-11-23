@@ -1,2 +1,2 @@
 import './scss/style.scss'
-import 'bootstrap'
+require('bootstrap');
