@@ -44,6 +44,16 @@ $bg-color: lightblue;
 /* location-container content */
 
 .logo-box, .city-box, .location-box {
-  position: relative;
   border: 1px solid blue;
+}
+
+.logo-box {
+  display: flex;
+  justify-content: center;
+}
+
+.option-box {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
 }
