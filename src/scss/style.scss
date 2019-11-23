@@ -6,10 +6,10 @@ $whole-week-weather-container-flex-basis: 30%;
 $main-box-min-width: 350px;
 
 :root {
-  //background: linear-gradient(180deg, #002947 0%, rgba(56, 144, 207, 0.79) 100%);
+  background: linear-gradient(180deg, #002947 0%, rgba(56, 144, 207, 0.79) 100%);
   background-color: $bg-color;
   color: #000;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 /* CONTAINER */
@@ -26,6 +26,7 @@ $main-box-min-width: 350px;
 
 .location-container {
   display: flex;
+  background: rgba(255, 255, 255, 0.23);
   flex-flow: column wrap;
   flex-basis: $location-container-flex-basis;
   justify-content: center;
@@ -134,7 +135,7 @@ $main-box-min-width: 350px;
 .main-city-box {
   display: flex;
   flex-flow: column wrap;
-  min-width: $main-box-min-width;
+  color: $font-color;
 }
 
 .weather-png { // img
@@ -185,11 +186,12 @@ $main-box-min-width: 350px;
   line-height: 67px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 40px 0;
+  color: $font-color;
 }
 
 .temp {
   font-family: Ubuntu;
-  font-style: normal;
+  color: $font-color;
   font-weight: 300;
   font-size: 17px;
   line-height: 20px;
@@ -235,8 +237,40 @@ $main-box-min-width: 350px;
 
 .whole-week-weather-container {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   flex-basis: $whole-week-weather-container-flex-basis;
   border: 3px solid black;
+}
 
+.date-box {
+  color: $font-color;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.next-days {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: stretch;
+}
+
+.sample-day {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  border: 1px solid green;
+}
+
+.dow-and-weather-pic {
+  display: flex;
+  flex-flow: column nowrap;
+  border: 1px solid red;
+  margin: 0;
+  padding: 0;
+  color: $font-color;
+
+  .hl-text {
+    font-weight: bold;
+  }
 }
