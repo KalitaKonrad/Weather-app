@@ -1,9 +1,11 @@
 $bg-color: lightblue;
+$font-color: #fff;
 
 :root {
   //background: linear-gradient(180deg, #002947 0%, rgba(56, 144, 207, 0.79) 100%);
   background-color: $bg-color;
-  color: red;
+  color: #000;
+  font-family: 'Raleway', sans-serif;
 }
 
 /* main containers */
@@ -50,10 +52,88 @@ $bg-color: lightblue;
 .logo-box {
   display: flex;
   justify-content: center;
+  margin: 0 40px;
 }
 
 .option-box {
   display: flex;
   flex-flow: column;
   justify-content: space-evenly;
+  text-align: center;
+  font-size: 12px;
+  padding: 10px 40px;
+}
+
+.option-box .dividing-paragraph {
+  margin: 5px 0;
+}
+
+.city-search {
+  //display: flex;
+  background: #D5EDFF;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.25);
+  min-height: 50px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+.location-search {
+  background: #D5EDFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  min-height: 50px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.option-box__search-form {
+  display: flex;
+  
+  button {
+    background: #D5EDFF;
+    min-height: 50px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    padding: 1px;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  input {
+    flex-grow: 2;
+    border: none;
+  }
+
+  input:focus {
+    outline: none;
+  }
+  
+}
+
+.option-box__location-form {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    flex-grow: 2;
+    color: #fff;
+    background-color: #002947;
+    min-height: 50px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    padding: 1px;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
 }
