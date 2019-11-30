@@ -132,13 +132,13 @@ const displayNextWeekWeather = (fetchedData, countryCode) => {
   let step = Math.floor(listOfStates.length / 5) - 1; 
   
   nextDays.innerHTML = ""; // empty the box for nextWeekWeather
-  //let tomorrow = new Date();
+  let tomorrow = new Date();
   for (let i = 0; i < 5; i++) {
-    //tomorrow.setDate(new Date().getDate() + 1)
+    tomorrow.setDate(tomorrow.getDate() + 1)
     nextDays.innerHTML += createSampleDay(listOfStates[(i + 1) * step],
-    DOW[(new Date().getDay() + (i + 1)) % 7],
-    ((new Date().getDate() + (i + 1)) % 31) + 1,
-    months[new Date().getMonth()]); // second parameter takes current day + (i + 1) and returns the result % 7, e.g. if current day = monday, then the for loop will return five next days -> tuesday, wedensday... and so on
+    DOW[tomorrow.getDay()],
+    tomorrow.getDay() + 1,
+    months[tomorrow.getMonth()]); // second parameter takes current day + (i + 1) and returns the result % 7, e.g. if current day = monday, then the for loop will return five next days -> tuesday, wedensday... and so on
   }
 }
 
