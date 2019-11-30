@@ -18,11 +18,15 @@
     "url": "https://github.com/KalitaKonrad/Weather-app-JS/issues"
   },
   "homepage": "https://github.com/KalitaKonrad/Weather-app-JS#readme",
-  "dependencies": {},
+  "dependencies": {
+    "@babel/runtime": "^7.7.4"
+  },
   "devDependencies": {
     "@babel/core": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.4",
     "@babel/preset-env": "^7.7.4",
     "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
     "browser-sync": "^2.26.7",
     "css-loader": "^3.2.0",
     "file-loader": "^4.3.0",
