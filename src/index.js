@@ -108,7 +108,6 @@ const getWeatherImageURL = (iconID) => {
 
 const fetchNextWeekWeatherData = async (city) => {
   try {
-    console.log(API_COUNTRY_CODE)
     const requestUrl = `${API_NEXTWEEK_URL}&q=${city},${API_COUNTRY_CODE}&APPID=${API_KEY}` // instead of pl make it fetchCountryCode, but how???
     const request = await fetch(requestUrl);
     const response = await request.json()
@@ -133,7 +132,9 @@ const displayNextWeekWeather = (fetchedData, countryCode) => {
   let step = Math.floor(listOfStates.length / 5) - 1; 
   
   nextDays.innerHTML = ""; // empty the box for nextWeekWeather
+  //let tomorrow = new Date();
   for (let i = 0; i < 5; i++) {
+    //tomorrow.setDate(new Date().getDate() + 1)
     nextDays.innerHTML += createSampleDay(listOfStates[(i + 1) * step],
     DOW[(new Date().getDay() + (i + 1)) % 7],
     ((new Date().getDate() + (i + 1)) % 31) + 1,
@@ -162,8 +163,8 @@ const displayDateAndTime = function() {
 
   setInterval(function() {
     let currentDate = new Date()
-    let date = currentDate.getDate() + "/"
-    + (currentDate.getMonth()+1)  + "/" 
+    let date = currentDate.getDate() + "."
+    + (currentDate.getMonth()+1)  + "." 
     + currentDate.getFullYear()
 
     let time = currentDate.getHours() < 10 ? "0" + currentDate.getHours() 
@@ -178,5 +179,7 @@ const displayDateAndTime = function() {
     DOM.dateAndTime.innerHTML = datetime
   }, 1000); 
 }
+
+// invoke main function 
 
 registerListeners()
