@@ -9,16 +9,15 @@
   <title>Weather-app</title>
 </head>
 <body>
-  
-  <div class="container">
+  <sp class="container">
     <div class="location-container">
       <div class="logo-box">
         <img src="./images/doesItRain.png">
       </div>
       <div class="option-box">
-        <form class="option-box__search-form">
-          <input type="text" class="city-search" placeholder="wybierz miasto">
-          <button><img src="./images/go.png"></button>
+        <form id="search" class="option-box__search-form">
+          <input type="text" name="city" class="city-search" placeholder="wybierz miasto">
+          <button type="submit"><img src="./images/go.png"></button>
         </form>
         <p class="dividing-paragraph">albo</p>
         <form class="option-box__location-form">
@@ -28,29 +27,30 @@
           </button>
         </form>
       </div>
-      
     </div>
+
     <div class="main-container">
       <div class="main-city-box">
-        <img src="./images/sunny.png" class="weather-png" width="94px" height="94px">
-        <h1 class="city-name">Miasto</h1>
-        <p class="weather-description">Opis Pogody</p>
+        <img class="weather-png js--icon" width="94px" height="94px">
+        <h1 class="city-name js--city-name">Miasto</h1>
+        <p class="weather-description js--weather-desc">Opis Pogody</p>
       </div>
       <div class="temp-box">
         <div class="temp-sub-box1">
-          <div class="current-temp">Temp</div>
+          <div class="current-temp js--current-temp">Temp</div>
           <div class="min-max-temp">
-            <p class="temp">temp. min</p>
-            <p class="temp">temp. max</p>
+            <p class="temp">temp. min<span class="js--temp-min"></span></p>
+            <p class="temp js--temp-max">temp. max</p>
           </div>
         </div>
         <div class="temp-sub-box2">
-          <div class="pressure">pressure<br> 1016hPa</div>
-          <div class="humidity">humidity</div>
-          <div class="wind">wind</div>
+          <div class="pressure">pressure<br> <span class="js--pressure"></span></div>
+          <div class="humidity">humidity<br> <span class="js--humidity"></span></div>
+          <div class="wind">wind<br> <span class="js--wind"></span></div>
         </div>
       </div>
     </div>
+
     <div class="whole-week-weather-container">
       <div class="date-box">Środa, 14 lipca 2019 <br>12:54</div>
       <div class="next-days">
@@ -68,7 +68,5 @@
       </div>
     </div>
   </div>
-
-
 </body>
 </html>
