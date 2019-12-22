@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+
+  <title>Weather-app</title>
+</head>
+<body>
+  <sp class="container">
+    <div class="location-container">
+      <div class="logo-box">
+        <img src="./images/doesItRain.png">
+      </div>
+      <div class="option-box">
+        <form id="search" class="option-box__search-form">
+          <input type="text" name="city" class="city-search" placeholder="Enter city name">
+          <button type="submit"><img src="./images/go.png"></button>
+        </form>
+        <p class="dividing-paragraph">albo</p>
+        <form class="option-box__location-form">
+          <button type="button" class="location-search">
+            Let me find you!
+            <img src="./images/location.png" width="20px" height="20px">
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <div class="main-city-box">
+        <img src="./images/sunny.png" class="weather-png js--icon" width="94px" height="94px">
+        <h1 class="city-name js--city-name">City</h1>
+        <p class="weather-description js--weather-desc">Weather Description</p>
+      </div>
+      <div class="temp-box">
+        <div class="temp-sub-box1">
+          <div class="current-temp js--current-temp">Temp</div>
+          <div class="min-max-temp">
+            <p class="temp">temp. min <span class="js--temp-min"></span></p>
+            <p class="temp">temp. max <span class="js--temp-max"></span></p>
+          </div>
+        </div>
+        <div class="temp-sub-box2">
+          <div class="pressure">pressure<br> <span class="js--pressure"></span></div>
+          <div class="humidity">humidity<br> <span class="js--humidity"></span></div>
+          <div class="wind">wind<br> <span class="js--wind"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="whole-week-weather-container">
+      <div class="date-box"></div>
+      <div class="next-days"></div>
+    </div>
+  </div>
+</body>
+</html>
