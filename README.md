@@ -25,18 +25,18 @@ The purpose of the project was to learn how to:
 ## Technologies
 
 * `Webpack - v4.41.6`
-* `Yarn - v1.19.1` --> https://classic.yarnpkg.com/en/docs/install
-* `npm - v6.13.6` --> https://www.npmjs.com/get-npm
-* `NodeJS - v13.1.0` --> https://nodejs.org/en/download/
+* `Yarn - v1.19.1` -> https://classic.yarnpkg.com/en/docs/install
+* `npm - v6.13.6` -> https://www.npmjs.com/get-npm
+* `NodeJS - v13.1.0` -> https://nodejs.org/en/download/
 * `JavaScript + HTML5 + SCSS`
 * `babel-runtime > core-js@2.6.11`
 
 ## Setup
 
 1. `git clone https://github.com/KalitaKonrad/Weather-app.git`
-2. `cd weather-app`
+2. `cd Weather-app`
 3. `yarn install`
-4. `yarn start:dev` --> default port: `localhost:8080` on your browser
+4. `yarn start:dev` -> default port: `localhost:8080` on your browser
 
 ## Features
 
@@ -46,4 +46,4 @@ Displaying and forecasting weather by:
 
 ## Inspiration
 
-Project made for CodersCamp -- Web Development Course.
+Project made for CodersCamp - Web Development Course.
