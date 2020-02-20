@@ -40,6 +40,7 @@ const months = {
 };
 
 const searchForm = document.querySelector('#search');
+const findForm = document.querySelector('#findMe');
 
 const DOM = {
   cityName: document.querySelector('.js--city-name'),
@@ -60,7 +61,29 @@ const handleErrorResponse = error => {
 
 const registerListeners = () => {
   searchForm.addEventListener('submit', onSearchSubmit);
+  findForm.addEventListener('submit', onFindClick);
   displayDateAndTime();
+};
+
+const onFindClick = async event => {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(showWeatherDataForGeolocation, geoLocationError);
+};
+
+const showWeatherDataForGeolocation = async geoObject => {
+  const coords = geoObject.coords;
+  const lat = coords.latitude;
+  const lon = coords.longitude;
+  const request = await fetch(`${API_URL}&lat=${lat}&lon=${lon}&APPID=${API_KEY}`);
+
+  const { name } = await request.json().then(data => data);
+
+  await fetchWeatherData(name);
+  await fetchNextWeekWeatherData(name);
+};
+
+const geoLocationError = () => {
+  console.log('Geolocation is not supported in your browser!');
 };
 
 const onSearchSubmit = async event => {
